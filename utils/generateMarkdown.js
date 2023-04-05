@@ -46,11 +46,17 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  let boilerplate = 'This project is licensed under '
+  //let boilerplate = 'This project is licensed under '
 
   if (license === 'None') {
     return '';
-  } 
+  } else {
+    return `This project is licensed under [$(license)]($(renderLicenseLink(license))) <br/>
+    ![$(license)]($[renderLicenseBadge]))
+    `;
+
+  }
+
   
 }
 

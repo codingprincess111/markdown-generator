@@ -34,7 +34,7 @@ function init() {
             },
             {
                 type: 'input',
-                name: 'projectName',
+                name: 'description',
                 message: questions [1],
             },
             {
@@ -68,7 +68,7 @@ function init() {
             },
             {
                 type: 'input',
-                name: 'githubUsername',
+                name: 'github',
                 message: questions [7],
 
             },
@@ -79,9 +79,8 @@ function init() {
 
             },
         ])
-
-
         .then((answers) => {
+            console.log(answers)
             writeToFile('README.md',answers);
         })
             
